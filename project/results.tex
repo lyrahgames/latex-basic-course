@@ -1,0 +1,22 @@
+\documentclass[crop=false]{standalone}
+
+\input{standard_preamble}
+
+\begin{document}
+  \section{Results}
+  \begin{table}[H]
+    \caption{Test table}
+    \center
+    \begin{tabular}{llll}
+      \hline
+      $x$ & $e^x$ & $\sin x$ & $\cos x$ \\
+      \hline
+      \hline
+      $0$ & $1$ & $0.0175$ & $0.9998$ \\
+      $1$ & $e$ & $\sin(1)$ & $\cos(1)$ \\
+      $2$ & $e^2$ & $\sin(2)$ & $\cos(2)$ \\
+      $3$ & $e^3$ & $\sin(3)$ & $\cos(3)$ \\
+      \hline
+    \end{tabular}
+  \end{table}
+\end{document}

@@ -1,0 +1,25 @@
+\documentclass[crop=false]{standalone}
+
+\input{standard_preamble}
+
+\begin{document}
+  \section{Introduction}
+    We choose the following.
+    \[
+      x = r \cos \varphi
+      \qquad
+      y = r \sin \varphi
+    \]
+    Then we do get
+    \[
+      r = \sqrt{x^2 + y^2}
+      \qquad
+      \varphi = \arctan{\frac{y}{x}}
+    \]
+    The result is given by
+    \begin{align*}
+      \integral{-\infty}{\infty}{e^{-x^2}}{x}
+      &= \sqrt{ \integral{0}{\infty}{ \integral{0}{2\pi}{ e^{-r^2} r }{\varphi} }{r} } \\
+      &= \sqrt{\pi}
+    \end{align*}
+\end{document}

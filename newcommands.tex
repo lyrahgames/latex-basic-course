@@ -1,0 +1,28 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+
+\newcommand{\diff}[1]{\mathrm{d}#1}
+\newcommand{\test}[2]{#1 \times #2}
+
+\newcommand{\integral}[4]{\int_{#1}^{#2} #3 \, \diff{#4}}
+\newcommand{\derivative}[2]{\frac{\diff{#1}(#2)}{\diff{#2}}}
+% \newcommand{\boxBrackets}
+
+\begin{document}
+  \[
+    \mathrm{d}x
+  \]
+  \[
+    \diff{x}
+  \]
+  \[
+    \test{x}{y}
+  \]
+  \[
+    \integral{a}{b}{f(x)}{x}
+  \]
+  \[
+    \derivative{f}{x}
+  \]
+\end{document}

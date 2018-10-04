@@ -1,0 +1,35 @@
+\documentclass[a4paper, twoside]{article}
+
+\input{standard_preamble}
+
+\usepackage{hyperref}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\fancypagestyle{mainstyle}{
+  \fancyhf{}
+  \fancyfoot[C]{\footnotesize\bigskip\thepage}
+  % \fancyhead[LO,RE]{\footnotesize \thetitle} %left
+  % \fancyhead[RO,LE]{\footnotesize \theauthor} %right
+  % \fancyhead[LO,RE]{\footnotesize \ \smallskip}
+  \fancyhead[RO,LE]{\footnotesize \rightmark \smallskip} %right
+  \renewcommand{\headrulewidth}{0.5pt}
+  \renewcommand{\footrulewidth}{0.5pt}
+}
+
+
+\title{Big Project}
+\author{The Right of Einstein}
+
+\begin{document}
+  \pagestyle{mainstyle}
+  \maketitle
+  \tableofcontents
+  \listoffigures
+  \listoftables
+  \input{abstract}
+  \input{introduction}
+  \input{background}
+  \input{results}
+\end{document}

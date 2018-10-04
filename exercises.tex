@@ -1,0 +1,81 @@
+\documentclass[fleqn,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=20mm,right=20mm,top=20mm,bottom=20mm]{geometry}
+\usepackage{amsmath}
+\usepackage{mathtools}
+
+\title{Exercise Sheet}
+\author{Markus Pawellek}
+
+\newcommand{\dotProduct}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\diff}[1]{\mathrm{d}#1}
+\newcommand{\integral}[4]{\int_{#1}^{#2} #3 \, \diff{#4}}
+
+\begin{document}
+  \section{Computations...}
+    \begin{align*}
+      \dotProduct{h}{V_f^* g}
+      &= \dotProduct{V_f h}{g} \\
+      &= \integral{G}{}{ \integral{G}{}{h(x) \overline{f(y^{-1}x)}}{x}\ \overline{g(y)} }{y} \\
+      &= \integral{G}{}{ h(x) \overline{\integral{G}{}{g(y)f(y^{-1}x)}{x}}\ }{y}
+    \end{align*}
+
+  \section{Mechanics}
+    The symmetry character of a state does not change in the course of time:
+    \[
+      \psi(t) = T e^{-\frac{i}{\hbar}\integral{0}{t}{H(t')}{t'}} \psi(0)
+    \]
+    For arbitrary permutations $P$, the states introduced in the last section satisfy
+    \begin{align*}
+      P\psi_s &= \psi_s \\
+      P\psi_a &= (-1)^P \psi_a
+    \end{align*}
+    with
+    \[
+      (-1)^P =
+      \begin{cases}
+        1 &: \text{for even permutations} \\
+        -1 &: \text{for odd permutations}
+      \end{cases}
+    \]
+    Thus, the state $\psi_s$ and $\psi_a$ form the basis of two one-dimensional representations of the permutation group $S_N$.
+    For $\psi_s$, every $P$ is assigned the number $1$, ...
+
+  \subsection{Gauss sum}
+  \label{sub:gauss}
+    For every natural number $n$ we have:
+    \[
+      \sum_{i=1}^n i = \frac{n(n+1)}{2}
+    \]
+
+    \textit{Proof:}\\
+    We set $S(n)\coloneqq 1 + 2 + \ldots + n$ and show $S(n)=\frac{n(n+1)}{2}$ through complete induction.
+
+  \section{More}
+    \begin{align}
+      \begin{pmatrix}
+        n \\
+        k
+      \end{pmatrix}
+      &\coloneqq
+      \prod_{j=1}^k \frac{n-j+1}{j} \\
+      &= \frac{n(n-1)\cdot\ldots\cdot(n-k+1)}{1\cdot 2\cdot \ldots \cdot k}
+    \end{align}
+    From the definition we know the following.
+    \begin{equation}
+      \begin{pmatrix}
+        n \\ 0
+      \end{pmatrix}
+      = 1,\qquad
+      \begin{pmatrix}
+        n \\ 1
+      \end{pmatrix}
+      = n
+    \end{equation}
+    Of course we know a lot from section \ref{sub:gauss}.
+
+  \subsection{Logical...}
+    \[
+      x < y \quad \iff \quad -x > -y
+    \]
+\end{document}

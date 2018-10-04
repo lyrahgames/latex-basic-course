@@ -1,0 +1,89 @@
+\documentclass[twocolumn,a4paper,fleqn]{article}
+
+\usepackage[left=20mm,right=30mm,top=40mm,bottom=20mm]{geometry}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+
+\title{sections}
+\author{Markus Pawellek}
+% \date{}
+
+\begin{document}
+  \maketitle
+
+
+  \begin{align}
+    E_\mathrm{kin} &= \frac{1}{2}mv^2 \\
+    &= \frac{m}{2}v^2
+  \end{align}
+
+  \begin{align*}
+    a&=b & f&=g \\
+    c&=d & h&=i
+  \end{align*}
+
+  \begin{align*}
+    f(x) &= \left( \frac{a}{b} \right. \\
+    &+ \left. \frac{c}{d} \right)
+  \end{align*}
+
+  \[
+    \begin{pmatrix}
+      a & b \\
+      c & d
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+      a & b & c \\
+      d & e & f \\
+      g & h & i \\
+      j & k & l
+    \end{pmatrix}
+  \]
+
+
+  \section{first}
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  \[
+    x \in R
+  \]
+
+  \subsection{first.first}
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  Here is a text equation: $x\in R$
+  $f = x^2 + a^2 - \sum_{i=0}^k n^2_k \frac{a}{b}$
+
+  \subsection{first.second}
+  \label{sub:first-second}
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  \section{second 2}
+  In first section \ref{sub:first-second}.
+  The following equation \ref{equ:square}.
+
+  \begin{equation}
+    \label{equ:square}
+    f(x) = x^2
+  \end{equation}
+
+  \section*{third}
+\end{document}
