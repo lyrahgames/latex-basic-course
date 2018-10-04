@@ -1,0 +1,27 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{graphicx}
+
+\usepackage{lmodern}
+\usepackage{bookman}
+\usecolortheme{seahorse}
+\usefonttheme[onlymath]{serif}
+
+\newenvironment{mybox}{
+  \begin{beamercolorbox}[sep=0pt,center,shadow=true,rounded=true]{title}
+}{
+  \end{beamercolorbox}
+}
+
+\AtBeginSection[]{
+  \begin{frame}
+    \vfill
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+      \usebeamerfont{title}\insertsectionhead\par%
+    \end{beamercolorbox}
+    \vfill
+  \end{frame}
+}
