@@ -1,0 +1,81 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{lmodern}
+\usepackage{bookman}
+\usefonttheme[onlymath]{serif}
+\usecolortheme{seahorse}
+% \usecolortheme{crane}
+% \usetheme{Berlin}
+% \usetheme{Frankfurt}
+
+\newenvironment{mybox}{
+  \begin{beamercolorbox}[sep=0pt,center,shadow=true,rounded=true]{title}
+}{
+  \end{beamercolorbox}
+}
+
+\AtBeginSection[]{
+  \begin{frame}
+    \vfill
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+      \usebeamerfont{title}\insertsectionhead\par%
+    \end{beamercolorbox}
+    \vfill
+  \end{frame}
+}
+
+\title{Slides for Everyone}
+\author{Google}
+
+\begin{document}
+  \frame{\titlepage}
+
+  \begin{frame}{Outline}
+    \tableofcontents
+  \end{frame}
+
+  \begin{frame}
+    \begin{mybox}
+      \[
+        x = \sum_{i=0}^n \pi^i * a
+      \]
+    \end{mybox}
+  \end{frame}
+
+  \section{Introduction}
+
+  \begin{frame}{Introduction}
+    \begin{itemize}
+      \item first point
+      \item second point
+      \item third point
+    \end{itemize}
+  \end{frame}
+
+  \section{Background}
+
+  \begin{frame}{Background}
+    \begin{enumerate}
+      \item first point
+      \item second point
+      \item third point
+    \end{enumerate}
+  \end{frame}
+
+  \begin{frame}{Descriptions}
+    \begin{description}
+      \item[Test:] This is the explanation for test.
+      \pause
+      \item[More:] This is the explanation for more.
+    \end{description}
+  \end{frame}
+
+  \section{Results}
+
+  \begin{frame}{Results}
+    \begin{itemize}
+      \item $0 = 0$
+    \end{itemize}
+  \end{frame}
+\end{document}
